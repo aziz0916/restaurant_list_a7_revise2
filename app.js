@@ -25,16 +25,6 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// app.get('/', (req, res) => {
-//   return Restaurant.find()
-//     .lean()
-//     .then(restaurants => res.render('index', { restaurants }))
-//     .catch(error => {
-//       console.log(error)
-//       res.render('errorPage', { status: 500, error: error.message })
-//     })
-// })
-
 app.get('/', (req, res) => {
   let keyword = req.query.keyword
 
@@ -75,24 +65,6 @@ app.post('/restaurants', (req, res) => {
       res.render('errorPage', { status: 500, error: error.message })
     })
 })
-
-// app.get('/search', (req, res) => {
-//   let keyword = req.query.keyword
-
-//   return Restaurant.find()
-//     .lean()
-//     .then(restaurants => {
-//       restaurants = restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(keyword.toLowerCase().trim()) || restaurant.category.toLowerCase().includes(keyword.toLowerCase().trim()))
-//       if (!restaurants.length) {
-//         keyword = `您輸入的關鍵字：${keyword} 沒有符合條件的餐廳`
-//       }
-//       res.render('index', { restaurants, keyword })
-//     })
-//     .catch(error => {
-//       console.log(error)
-//       res.render('errorPage', { status: 500, error: error.message })
-//     })
-// })
 
 app.get('/restaurants/:restaurants_id', (req, res) => {
   const restaurants_id = req.params.restaurants_id

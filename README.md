@@ -2,12 +2,12 @@
 此餐廳清單收藏了我最喜歡的8家餐廳，除了可以看到餐廳的詳細資訊，還可以透過餐廳名稱或餐廳類別來找到特定的餐廳，且能新增餐廳、修改餐廳資訊與刪除餐廳
 
 ## 專案畫面
-![Index](https://github.com/aziz0916/restaurant_list_a7/blob/main/public/images/index.png)
-![Detail](https://github.com/aziz0916/restaurant_list_a7/blob/main/public/images/detail.png)
-![Match](https://github.com/aziz0916/restaurant_list_a7/blob/main/public/images/match.png)
-![Unmatch](https://github.com/aziz0916/restaurant_list_a7/blob/main/public/images/unmatch.png)
-![New](https://github.com/aziz0916/restaurant_list_a7/blob/main/public/images/new.png)
-![Edit](https://github.com/aziz0916/restaurant_list_a7/blob/main/public/images/edit.png)
+![Index](https://github.com/aziz0916/restaurant_list_a7_revise/blob/main/public/images/index.png)
+![Detail](https://github.com/aziz0916/restaurant_list_a7_revise/blob/main/public/images/detail.png)
+![Match](https://github.com/aziz0916/restaurant_list_a7_revise/blob/main/public/images/match.png)
+![Unmatch](https://github.com/aziz0916/restaurant_list_a7_revise/blob/main/public/images/unmatch.png)
+![New](https://github.com/aziz0916/restaurant_list_a7_revise/blob/main/public/images/new.png)
+![Edit](https://github.com/aziz0916/restaurant_list_a7_revise/blob/main/public/images/edit.png)
 
 ## 專案功能
 1. 使用者可以在首頁看到所有餐廳與它們的簡單資料：
@@ -39,12 +39,12 @@
 1. 開啟終端機(Terminal)，Clone 此專案至本機電腦
 
 ```
-git clone https://github.com/aziz0916/restaurant_list_a7.git
+git clone https://github.com/aziz0916/restaurant_list_a7_revise.git
 ```
 2. 進入存放此專案的資料夾
 
 ```
-cd restaurant_list_a7
+cd restaurant_list_a7_revise
 ```
 3. 安裝 npm 套件
 
