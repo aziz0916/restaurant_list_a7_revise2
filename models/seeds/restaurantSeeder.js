@@ -16,7 +16,6 @@ db.once('open', () => {
 
   for (let i = 0; i < restaurantList.results.length; i++) {
     Restaurant.create({
-      id: restaurantList.results[i].id,
       name: restaurantList.results[i].name,
       name_en: restaurantList.results[i].name_en,
       category: restaurantList.results[i].category,
@@ -27,7 +26,32 @@ db.once('open', () => {
       rating: restaurantList.results[i].rating,
       description: restaurantList.results[i].description
     })
+      // .then(() => {
+      //   console.log('done.')
+      //   db.close()
+      // })
+      // .catch(error => {
+      //   console.log(error)
+      //   res.render('errorPage', { status: 500, error: error.message })
+      // })
+      // .finally(() => process.exit())
+      .then(() => {
+        Restaurant.find()
+          .then(restaurants => {
+            if (restaurants.length === restaurantList.results.length) {
+              console.log('done.')
+              db.close()
+            }
+          })
+          .catch(error => {
+            console.log(error)
+            res.render('errorPage', { status: 500, error: error.message })
+          })
+          .finally(() => process.exit())
+      })
+      .catch(error => {
+        console.log(error)
+        res.render('errorPage', { status: 500, error: error.message })
+      })
   }
-
-  console.log('done.')
 })

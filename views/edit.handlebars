@@ -1,12 +1,5 @@
 <form action="/restaurants/{{restaurant._id}}/edit" method="POST" class="w-50 m-auto pt-5">
   <div class="form-group row">
-    <label for="inputId"
-      class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder px-0 text-center">ID</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputId" name="id" value="{{restaurant.id}}" required>
-    </div>
-  </div>
-  <div class="form-group row">
     <label for="inputName"
       class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder px-0 text-center">中文名</label>
     <div class="col-sm-10">
@@ -17,22 +10,21 @@
     <label for="inputNameEn"
       class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder px-0 text-center">英文名</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputNameEn" name="name_en" value="{{restaurant.name_en}}" required>
+      <input type="text" class="form-control" id="inputNameEn" name="name_en" value="{{restaurant.name_en}}">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputCategory"
       class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder px-0 text-center">類別</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputCategory" name="category" value="{{restaurant.category}}"
-        required>
+      <input type="text" class="form-control" id="inputCategory" name="category" value="{{restaurant.category}}">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputImage"
       class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder px-0 text-center">照片</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputImage" name="image" value="{{restaurant.image}}" required>
+      <input type="text" class="form-control" id="inputImage" name="image" value="{{restaurant.image}}">
     </div>
   </div>
   <div class="form-group row">
@@ -54,22 +46,21 @@
     <label for="inputGoogleMap"
       class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder px-0 text-center">地圖</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputGoogleMap" name="google_map" value="{{restaurant.google_map}}"
-        required>
+      <input type="text" class="form-control" id="inputGoogleMap" name="google_map" value="{{restaurant.google_map}}">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputRating"
       class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder px-0 text-center">評價</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputRating" name="rating" value="{{restaurant.rating}}" required>
+      <input type="number" class="form-control" id="inputRating" name="rating" value="{{restaurant.rating}}" min="0.0" max="10.0" step="0.1">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputDescription"
       class="col-sm-2 col-form-label btn-warning text-muted font-weight-bolder d-flex align-items-center justify-content-center">描述</label>
     <div class="col-sm-10">
-      <textarea class="form-control" id="inputDescription" name="description" rows="4" cols="50" required>{{restaurant.description}}
+      <textarea class="form-control" id="inputDescription" name="description" rows="4" cols="50">{{restaurant.description}}
       </textarea>
     </div>
   </div>
