@@ -26,6 +26,7 @@ db.once('open', () => {
       rating: restaurantList.results[i].rating,
       description: restaurantList.results[i].description
     })
+      // 假如使用此註解部分的程式會因為for迴圈而無法產生完整的種子資料
       // .then(() => {
       //   console.log('done.')
       //   db.close()
